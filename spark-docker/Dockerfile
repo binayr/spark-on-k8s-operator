@@ -21,4 +21,4 @@ RUN rm -rf spark-3.3.1-bin-hadoop3
 RUN rm spark-3.3.1-bin-hadoop3.tgz
 
 COPY entrypoint.sh /opt/
-# ENTRYPOINT ["/usr/bin/entrypoint.sh"]
+# ENTRYPOINT ["/opt/entrypoint.sh"]
