@@ -11,14 +11,14 @@ ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini /usr/
 RUN chmod +x /usr/bin/tini
 
 ADD https://dlcdn.apache.org/spark/spark-3.3.1/spark-3.3.1-bin-hadoop3-scala2.13.tgz /opt/
-RUN tar -xvf /opt/spark-3.3.1-bin-hadoop3.tgz
-RUN cp -r spark-3.3.1-bin-hadoop3/ /opt/spark/
+RUN tar -xvf /opt/spark-3.3.1-bin-hadoop3-scala2.13.tgz
+RUN cp -r spark-3.3.1-bin-hadoop3-scala2.13/ /opt/spark/
 
 ENV DOCKER_DEFAULT_PLATFORM=linux/amd64
 ENV SPARK_HOME="/opt/spark"
 
-RUN rm -rf spark-3.3.1-bin-hadoop3 
-RUN rm spark-3.3.1-bin-hadoop3.tgz
+RUN rm -rf spark-3.3.1-bin-hadoop3-scala2.13
+RUN rm spark-3.3.1-bin-hadoop3-scala2.13.tgz
 
 COPY entrypoint.sh /opt/
 # ENTRYPOINT ["/opt/entrypoint.sh"]
