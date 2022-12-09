@@ -10,7 +10,7 @@ ENV TINI_VERSION v0.19.0
 ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini /usr/bin/tini
 RUN chmod +x /usr/bin/tini
 
-ADD https://dlcdn.apache.org/spark/spark-3.3.1/spark-3.3.1-bin-hadoop3.tgz /opt/
+ADD https://dlcdn.apache.org/spark/spark-3.3.1/spark-3.3.1-bin-hadoop3-scala2.13.tgz /opt/
 RUN tar -xvf /opt/spark-3.3.1-bin-hadoop3.tgz
 RUN cp -r spark-3.3.1-bin-hadoop3/ /opt/spark/
 
